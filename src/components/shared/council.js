@@ -11,6 +11,7 @@ import {
     Typography
 } from "@mui/material";
 import {KeyboardArrowRight} from "@mui/icons-material";
+import React from "react";
 
 const Council = ({council}) => {
     const handleDetailClick = () => {

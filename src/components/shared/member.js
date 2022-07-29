@@ -6,6 +6,8 @@ const Member = ({member}) => {
             elevation={0}
             sx={{
                 backgroundColor: 'background.paper',
+                position: 'relative',
+                height: 300,
                 '&:hover': {
                     boxShadow: '20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff',
                     transition: 'all 500ms ease-in-out',
@@ -13,13 +15,16 @@ const Member = ({member}) => {
                     borderBottomRightRadius: 0,
                     borderTopLeftRadius: 32,
                     borderTopRightRadius: 32,
+                    '&: .content': {
+
+                    }
                 }
             }}>
             <CardMedia
                 src={member.image}
                 component="img"
-                sx={{width: '100%', height: 250, objectFit: 'cover', objectPosition: 'top'}}/>
-            <CardContent>
+                sx={{width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top'}}/>
+            <CardContent className="content" sx={{position: 'absolute'}}>
                 <Stack direction="column" spacing={2}>
                     <Typography
                         align="center"

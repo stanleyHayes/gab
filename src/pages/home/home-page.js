@@ -7,10 +7,13 @@ import logo from "../../assets/images/gab-3.png";
 import pressRelease from "../../assets/images/press release.jpg";
 import guidelines from "../../assets/images/GAB COVID 19 Guidelines for Banks-1.jpg";
 import address4 from "../../assets/images/address4.jpeg";
-import covid from "../../assets/images/covid.png";
+import safe from "../../assets/images/377279.png";
 import post2 from "../../assets/images/post2.png";
 
 import React from "react";
+import {GAB_DATA} from "../../utils/data";
+import Council from "../../components/shared/council";
+import NewsItem from "../../components/shared/news-item";
 
 const HomePage = () => {
 
@@ -74,7 +77,7 @@ const HomePage = () => {
                             <CardMedia src={guidelines} sx={{width: '100%', height: '100%'}} component="img"/>
                         </Grid>
                         <Grid item={true} xs={12} md={4}>
-                            <CardMedia src={address4} sx={{width: '100%', height: '100%'}} component="img"/>
+                            <CardMedia src={safe} sx={{width: '100%', height: '100%'}} component="img"/>
                         </Grid>
                     </Grid>
                 </Container>
@@ -89,23 +92,25 @@ const HomePage = () => {
                         Important Notice
                     </Typography>
                     <Grid container={true} spacing={4}>
-                        <Grid item={true} xs={12} md={8}>
+                        <Grid item={true} xs={12} md={9}>
                             <Grid container={true} spacing={2}>
                                 <Grid item={true} xs={12} md={4}>
-                                    <CardMedia src={post2} sx={{width: '100%', height: '100%'}} component="img"/>
+                                    <CardMedia
+                                        src={post2}
+                                        sx={{width: '100%', height: '100%', objectFit: 'contain'}}
+                                        component="img"
+                                    />
                                 </Grid>
                                 <Grid item={true} xs={12} md={8}>
                                     <Typography
-                                        align="center"
-                                        variant="h5"
+                                        variant="body1"
                                         sx={{color: 'text.primary', textTransform: 'uppercase', mb: 2}}>
                                         AMID MULTIPLE CRISES, WORLD BANK GROUP REFOCUSES PROGRAMS AND INCREASES
                                         FINANCING TO $74 BILLION IN
                                     </Typography>
                                     <Typography
-                                        align="center"
-                                        variant="h5"
-                                        sx={{color: 'text.primary', mb: 2}}>
+                                        variant="body2"
+                                        sx={{color: 'text.primary', mb: 4}}>
                                         WASHINGTON, July 10, 2020 - As people in developing countries around the world
                                         faced multiple crises, including the COVID-19 pandemic, the World Bank Group
                                         worked to respond quickly with technical and policy advice, and scaled up
@@ -115,7 +120,6 @@ const HomePage = () => {
                                     <Link underline="none" href="https://forum.gab.com.gh">
                                         <Button
                                             color="secondary"
-                                            fullWidth={true}
                                             sx={{
                                                 textTransform: 'capitalize',
                                                 '&:hover': {
@@ -128,15 +132,39 @@ const HomePage = () => {
                                             }}
                                             variant="contained"
                                             disableElevation={true}>
-                                            Login
+                                            Read More
                                         </Button>
                                     </Link>
                                 </Grid>
                             </Grid>
                         </Grid>
-                        <Grid item={true} xs={12} md={4}>
-                            <CardMedia src={covid} sx={{width: '100%', height: '100%'}} component="img"/>
+                        <Grid item={true} xs={12} md={3}>
+                            <CardMedia
+                                src={address4}
+                                sx={{width: '100%', height: '100%'}}
+                                component="img"
+                            />
                         </Grid>
+                    </Grid>
+                </Container>
+            </Box>
+
+            <Box sx={{py: 4, backgroundColor: 'background.default'}}>
+                <Container>
+                    <Typography
+                        align="center"
+                        variant="h5"
+                        sx={{color: 'text.primary', textTransform: 'uppercase', mb: 2}}>
+                        Latest News
+                    </Typography>
+                    <Grid container={true} spacing={4}>
+                        {GAB_DATA.NEWS.map((newsItem, index) => {
+                            return (
+                                <Grid key={index} item={true} xs={12} md={4} lg={3}>
+                                    <NewsItem newsItem={newsItem}/>
+                                </Grid>
+                            )
+                        })}
                     </Grid>
                 </Container>
             </Box>

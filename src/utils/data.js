@@ -57,11 +57,19 @@ import republicBank from "./../assets/images/485180.png";
 import zenithBank from "./../assets/images/563476.png";
 import ubaBank from "./../assets/images/937678.jpg";
 import cbgBank from "./../assets/images/496074.png";
+import reading from "./../assets/images/reading.png";
 
 import WA0004 from "./../assets/videos/VID-20210217-WA0004.mp4";
 import WA0005 from "./../assets/videos/VID-20210217-WA0005.mp4";
 import WA0006 from "./../assets/videos/VID-20210217-WA0006.mp4";
 import WA0007 from "./../assets/videos/VID-20210217-WA0007.mp4";
+
+
+import guidelines from "./../assets/files/GAB COVID 19 Guidelines for Banks.pdf";
+import monthlyRate from "./../assets/files/MONTHLY RATE SEPTEMBER.pdf";
+import pressRelease from "./../assets/files/press release - use of face shields .pdf";
+import background from "./../assets/images/background.jpg";
+
 
 const EXECUTIVE_COUNCIL_MEMBERS = [
     {
@@ -292,7 +300,6 @@ const MEMBERS = [
     }
 ];
 
-
 const MEMBER_BANKS = [
     {
         image: access,
@@ -438,7 +445,38 @@ const GALLERY = [
     },
 ];
 
+const MAGAZINES = [
+    {
+        file: guidelines,
+        title: 'Sample Title',
+        _id: '1',
+        cover: reading
+    },
+    {
+        file: monthlyRate,
+        title: 'Sample Title',
+        _id: '2',
+        cover: reading
+
+    },
+    {
+        file: pressRelease,
+        title: 'Sample Title',
+        _id: '3',
+        cover: reading,
+    }
+]
+
+const NEWS = [
+    {
+        title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
+        image: background,
+        _id: 1
+    }
+]
 export const GAB_DATA = {
+    NEWS,
+    MAGAZINES,
     MEMBER_BANKS,
     MEMBERS,
     CORE_VALUES,
