@@ -1,9 +1,10 @@
-import {Button, Container, Divider, Link, Stack, Toolbar} from "@mui/material";
+import {Button, Container, Divider, Stack, Toolbar} from "@mui/material";
 import logo from "./../../assets/images/logo.png";
 import {useSelector} from "react-redux";
 import {selectUI} from "../../redux/features/ui/ui-slice";
 import React from "react";
 import NavLink from "../shared/nav-link";
+import {Link} from "react-router-dom";
 
 const DesktopHeader = () => {
 
@@ -43,7 +44,7 @@ const DesktopHeader = () => {
                     </Stack>
 
                     <Stack direction="row" alignItems="center" spacing={2}>
-                        <Link underline="none" href="https://forum.gab.com.gh">
+                        <Link style={{textDecoration: 'none'}} to="/auth/login">
                             <Button
                                 color="secondary"
                                 fullWidth={true}

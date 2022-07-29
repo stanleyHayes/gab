@@ -100,7 +100,7 @@ const LoginPage = () => {
             }}>
                 {authLoading && <LinearProgress variant="query" color="secondary"/>}
                 <Grid container={true} justifyContent="center" alignItems="center">
-                    <Grid item={true} xs={12} md={6}>
+                    <Grid item={true} xs={12} md={8}>
                         <Container>
                             <Box mb={2}>
                                 <Button
@@ -135,26 +135,6 @@ const LoginPage = () => {
                                         <Typography mb={2} variant="h5" sx={{color: 'secondary.main'}}>
                                             Ghana Association of Bankers
                                         </Typography>
-
-                                        <Stack mb={4} direction="row" spacing={2} alignItems="center">
-                                            <Typography
-                                                variant="body2"
-                                                sx={{color: 'text.secondary', fontWeight: 500}}>
-                                                Don't have an account?
-                                            </Typography>
-                                            <Typography
-                                                variant="body2"
-                                                sx={{color: 'text.secondary', fontWeight: 500}}>
-                                                <Link
-                                                    style={{
-                                                        color: theme.palette.secondary.main,
-                                                        textDecoration: 'none'
-                                                    }}
-                                                    to="/auth/register">
-                                                    Sign Up
-                                                </Link>
-                                            </Typography>
-                                        </Stack>
 
                                         <Box mb={4}>
                                             <Typography mb={1} variant="body2"
