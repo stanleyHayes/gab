@@ -137,8 +137,9 @@ const LoginPage = () => {
                                         </Typography>
 
                                         <Box mb={4}>
-                                            <Typography mb={1} variant="body2"
-                                                        sx={{color: 'secondary.main', fontWeight: 'bold'}}>
+                                            <Typography
+                                                mb={1} variant="body2"
+                                                sx={{color: 'secondary.main', fontWeight: 'bold'}}>
                                                 Email
                                             </Typography>
                                             <FormControl fullWidth={true} variant="outlined">

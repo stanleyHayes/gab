@@ -1,8 +1,9 @@
-import {Box, Button, Divider, Stack, Link} from "@mui/material";
+import {Box, Button, Divider, Stack} from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
 import {closeDrawer, selectUI, toggleTheme} from "../../redux/features/ui/ui-slice";
 import SidebarLink from "../shared/sidebar-link";
 
+import {Link} from "react-router-dom";
 import {
     BrowseGallery,
     BrowseGalleryOutlined,
@@ -313,8 +314,10 @@ const SidebarContent = () => {
                         }
                     />
 
-                    <Link underlilng="none" href="https://forum.gab.com.gh"
-                          style={{marginLeft: 8, marginRight: 8}}>
+                    <Link
+                        sx={{textDecoration: 'none'}}
+                        to="/auth/login"
+                        style={{marginLeft: 8, marginRight: 8}}>
                         <Button
                             color="secondary"
                             fullWidth={true}
