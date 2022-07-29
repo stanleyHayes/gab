@@ -1,6 +1,6 @@
 import React from "react";
 import {Box, CardMedia, Container, Divider, Grid, Stack, Typography} from "@mui/material";
-import logo from "./../../assets/images/logo.png";
+import logo from "./../../assets/images/rsz_11logo.png";
 import ContactLink from "../shared/contact-link";
 import {CallOutlined, Facebook, HomeOutlined, LinkedIn, MailOutline, Twitter} from "@mui/icons-material";
 import ghana from "./../../assets/images/gab-1.png";
@@ -10,10 +10,17 @@ const DesktopFooter = () => {
         <Box sx={{backgroundColor: 'background.paper', py: 2}}>
             <Container>
                 <Grid container={true} spacing={4}>
-                    <Grid xs={3} item={true}>
+                    <Grid xs={12} md={4} item={true}>
                         <Stack direction="column" spacing={2}>
-                            <CardMedia component="img" src={logo}
-                                       sx={{width: '100%', objectFit: 'contain', objectPosition: 'center'}}/>
+                            <CardMedia
+                                component="img" src={logo}
+                                sx={{
+                                    width: 250,
+                                    height: 'auto',
+                                    maxWidth: '100%',
+                                    objectFit: 'contain',
+                                    objectPosition: 'center'
+                                }}/>
                             <Typography variant="body2" sx={{color: 'text.secondary'}}>
                                 Monday - Friday 8:00AM - 6PM
                             </Typography>
@@ -63,14 +70,7 @@ const DesktopFooter = () => {
                         </Stack>
 
                     </Grid>
-                    <Grid xs={3} item={true}>
-                        <Typography variant="h6" sx={{color: 'text.primary'}}>
-                            Public
-                        </Typography>
-                        <Divider variant="fullWidth" sx={{my: 2}}/>
-
-                    </Grid>
-                    <Grid xs={3} item={true}>
+                    <Grid xs={12} md={4} item={true}>
                         <Typography variant="h6" sx={{color: 'text.primary'}}>
                             Contact Us
                         </Typography>
@@ -148,13 +148,14 @@ const DesktopFooter = () => {
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid xs={3} item={true}>
+                    <Grid xs={12} md={4} item={true}>
                         <CardMedia
                             component="img"
                             src={ghana}
                             sx={{
                                 width: '100%',
                                 height: '100%',
+                                maxWidth: '100%',
                                 objectFit: 'contain',
                                 objectPosition: 'center'
                             }}

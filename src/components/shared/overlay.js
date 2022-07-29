@@ -10,7 +10,7 @@ const Overlay = ({children, image}) => {
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover',
-                    objectPosition: 'center',
+                    objectPosition: 'top',
                     position: 'absolute',
                     top: 0,
                     left: 0,
